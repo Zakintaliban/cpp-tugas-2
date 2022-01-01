@@ -40,10 +40,21 @@ cout<<"\nMasukkan Jumlah Karyawan Yang Akan Diinput : "; cin>>n;
   cout<<"Jumlah Jam Kerja : "; cin>>honor[i].jam;
   cout<<endl;
 
-  honor[i].harian = 15000;
-  honor[i].lebih = honor[i].jam - 8;
-  honor[i].jumlah = honor[i].harian + (5000 * honor[i].lebih);
-  total = total + honor[i].jumlah;
+  honor[i].harian = 150000;
+
+  if (honor[i].jam > 8)
+  {
+        honor[i].lebih = honor[i].jam - 8;
+        honor[i].jumlah = honor[i].harian + (5000 * honor[i].lebih);
+  }
+  else if (honor[i].jam < 8)
+  {
+        honor[i].jumlah = honor[i].jam * 15000;
+  }
+  else {
+      honor[i].jumlah = honor[i].harian;
+  }
+    total = total + honor[i].jumlah;
  }
 
 cout<<"--------------------------------------------------"<<endl;
