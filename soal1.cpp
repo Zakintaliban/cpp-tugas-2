@@ -1,6 +1,7 @@
 #include <iostream>
 #include <string.h>
 #include <stdio.h>
+#include <conio.h>
  
  
 using namespace std;
@@ -103,5 +104,6 @@ int main(){
         }  
     }while(a != "t");
     cout<<"terima kasih telah menggunakan program kami";
+    getch();
     return 0;
 }
