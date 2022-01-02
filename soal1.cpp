@@ -1,5 +1,5 @@
 #include <iostream>
-#include <string.h>
+#include <string>
 #include <stdio.h>
 #include <conio.h>
  
@@ -14,21 +14,16 @@ int tarif(int a,int b){
    
 }
  
-int total(int a, int b, int c) {
-        int hasil = a+b+c;
-        return hasil;
-} 
- 
 int main(){
  
-        char nama[20];
+        char nama[20],kode;
         int tb[3]={500,700,1000};
         char buku[20][20]={"Cerpen","Komik","Novel"};
-        int jp,total,totals0,totals1,totals2;
-        string a,kode;
+        int jp,total;
+        string a;
    
     
-        cout<<"Program Perpustakkan\n";
+        cout<<"Program Perpustakaan\n";
    
         cout<<"---------------------------------------------------\n";
         cout<<"|   KODE BUKU   |   JENIS BUKU   |   TARIF BUKU   |\n";
@@ -37,17 +32,17 @@ int main(){
         cout<<"|       K       |   Komik        |  Rp 700        |\n";
         cout<<"|       N       |   Novel        |  Rp 1000       |\n";
         cout<<"---------------------------------------------------\n";
+        do{
         cout<<"Nama Penyewa Buku    : ";
         cin>>nama;
-        do{
         cout<<"Kode buku [C/K/N]    : ";
         cin>>kode;
    
-        if(kode=="C"||kode=="c"){
+        if(kode=='C'||kode=='c'){
             cout<<"Banyak Pinjam   : ";
             cin>>jp;
        
-            totals0 = tarif(jp,tb[0]);
+            total = tarif(jp,tb[0]);
             
             cout<<"\nTarif Sewa Rp.    : ";
             cout<<tb[0];
@@ -56,19 +51,19 @@ int main(){
             cout<<"\nPenyewa dengan nama    : ";
             cout<<nama;
             cout<<"\nJumlah Bayar Penyewaan Sebesar Rp.    : ";
-            cout<<totals0;
+            cout<<total;
             
            
             cout<<"\nApakah anda ingin meminjam lagi (Y/t)? ";
             cin>>a;
        
        
-        }else if(kode=="K"||kode=="k"){
+        }else if(kode=='K'||kode=='k'){
        
             cout<<"Banyak Pinjam   : ";
             cin>>jp;
        
-            totals1 = tarif(jp,tb[1]);
+            total = tarif(jp,tb[1]);
            
             cout<<"\nTarif Sewa Rp.    : ";
             cout<<tb[1];
@@ -77,19 +72,19 @@ int main(){
             cout<<"\nPenyewa dengan nama    : ";
             cout<<nama;
             cout<<"\nJumlah Bayar Penyewaan Sebesar Rp.    : ";
-            cout<<totals1;
+            cout<<total;
             
             cout<<"\nApakah anda ingin meminjam lagi (Y/t)?";
             cin>>a;
        
        
-        }else if(kode=="N"||kode=="n"){
+        }else if(kode=='N'||kode=='n'){
        
 
             cout<<"Banyak Pinjam   : ";
             cin>>jp;
        
-            totals2 = tarif(jp,tb[2]);
+            total = tarif(jp,tb[2]);
             cout<<"\nTarif Sewa Rp.    : ";
             cout<<tb[2];
             cout<<"\nJenis buku     : ";
@@ -97,7 +92,7 @@ int main(){
             cout<<"\nPenyewa dengan nama    : ";
             cout<<nama;
             cout<<"\nJumlah Bayar Penyewaan Sebesar Rp.    : ";
-            cout<<totals2;
+            cout<<total;
             
             cout<<"\nApakah anda ingin meminjam lagi (Y/t)?";
             cin>>a;
