@@ -9,7 +9,7 @@ struct
 {
  char nama[20];
  int jam, lebih, harian, jumlah;
-}honor[10];
+}honor[0];
 
 int lbh(int jam)
 {
