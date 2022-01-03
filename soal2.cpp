@@ -25,7 +25,7 @@ int lbh(int jam)
 
 main()
 {
- int i, n, total=0;
+ int i, n;
 
 cout<<"**";
 cout<<"Menghitung Honor Pegawai Honorer"<<endl;
@@ -59,10 +59,10 @@ cout<<"\nMasukkan Jumlah Karyawan Yang Akan Diinput : "; cin>>n;
  cout<<"\t  Daftar Honor Pegawai Honorer "<<endl;
  cout<<"\t       PT. ALAKADARNYA"<<endl;
  cout<<endl;
-cout<<"--------------------------------------------------"<<endl;
- cout<<" No.   Nama     Jumlah    \tKelebihan  Jumlah "<<endl;
- cout<<"      Pegawai  Jam Kerja  \tJam Kerja   Honor "<<endl;
-cout<<"--------------------------------------------------"<<endl;
+cout<<"----------------------------------------------------------"<<endl;
+ cout<<" No.   Nama     Jumlah    \tKelebihan       Jumlah "<<endl;
+ cout<<"      Pegawai  Jam Kerja  \tJam Kerja       Honor "<<endl;
+cout<<"----------------------------------------------------------"<<endl;
 
  for(i = 1; i <= n; i++)
  {
@@ -70,7 +70,8 @@ cout<<"--------------------------------------------------"<<endl;
   cout<<"\t"<<honor[i].nama;
   cout<<"\t"<<honor[i].jam<<" jam";
   cout<<"\t\t"<<lbh(honor[i].jam)<<" jam";
-  cout<<"\t"<<honor[i].jumlah<<endl;
+  cout<<"\t\t"<<honor[i].jumlah<<endl;
  }
  getch();
+ return 0;
 }
