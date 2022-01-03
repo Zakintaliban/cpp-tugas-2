@@ -1,7 +1,7 @@
 # include <stdio.h>
 # include <conio.h>
 # include <iostream>
-#include <iomanip>
+# include <iomanip>
 
 using namespace std;
 
@@ -54,32 +54,23 @@ cout<<"\nMasukkan Jumlah Karyawan Yang Akan Diinput : "; cin>>n;
   else {
       honor[i].jumlah = honor[i].harian;
   }
-    total = total + honor[i].jumlah;
  }
 
-cout<<"--------------------------------------------------"<<endl;
- cout<<"  Daftar Honor Pegawai Honorer "<<endl;
- cout<<"       PT. ALAKADARNYA"<<endl;
-cout<<"--------------------------------------------------"<<endl;
+ cout<<"\t  Daftar Honor Pegawai Honorer "<<endl;
+ cout<<"\t       PT. ALAKADARNYA"<<endl;
  cout<<endl;
 cout<<"--------------------------------------------------"<<endl;
- cout<<"| No. |  Nama   |  Jumlah   | Kelebihan | Jumlah |"<<endl;
- cout<<"|     | Pegawai | Jam Kerja | Jam Kerja |  Honor |"<<endl;
+ cout<<" No.   Nama     Jumlah    \tKelebihan  Jumlah "<<endl;
+ cout<<"      Pegawai  Jam Kerja  \tJam Kerja   Honor "<<endl;
 cout<<"--------------------------------------------------"<<endl;
 
  for(i = 1; i <= n; i++)
  {
-  cout<<setw(3)<<"| "<<i;
-  cout<<setw(5)<<"| "<<honor[i].nama;
-  cout<<setw(6)<<"| "<<honor[i].jam<<" jam";
-  cout<<setw(6)<<"| "<<lbh(honor[i].jam)<<" jam";
-  cout<<setw(7)<<"| "<<honor[i].jumlah<<"  |"<<endl;
+  cout<<i;
+  cout<<"\t"<<honor[i].nama;
+  cout<<"\t"<<honor[i].jam<<" jam";
+  cout<<"\t\t"<<lbh(honor[i].jam)<<" jam";
+  cout<<"\t"<<honor[i].jumlah<<endl;
  }
-
-cout<<"--------------------------------------------------"<<endl;
- cout<<"Jumlah Pegawai          :       "<<n<<" orang"<<endl;
- cout<<"Total Honor Keseluruhan :       Rp. "<<total<<endl;
-cout<<"--------------------------------------------------"<<endl;
-
  getch();
 }
